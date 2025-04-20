@@ -7,7 +7,7 @@
 }
 
 .hover-effect::before {
-  background: white;
+  background: #2B2D42;
   content: "";
   position: absolute;
   inset: 0;
@@ -32,7 +32,17 @@
 }
 
 .grid-title-wrapper {
-  position: relative;
+  position: absolute;
   z-index: 10;
-  padding: 0.5rem 1rem;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem;
+}
+
+.grid-title-wrapper.bottom-right {
+  top: auto;
+  bottom: 1rem;
+  left: auto;
+  right: 1rem;
+  text-align: right;
 }

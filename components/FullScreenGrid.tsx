@@ -67,16 +67,16 @@ const gridItems: GridItem[] = [
     alt: "Non-automotive solutions",
   },
   {
-    id: "Why Choose Us",
-    imageSrc: "/image/full-screen-grid/why-choose-us.jpg",
-    title: "Why Choose Us",
+    id: "Contact",
+    imageSrc: "/image/full-screen-grid/contact.jpg",
+    title: "Contact",
     link: "/what-we-do/non-automotive",
     alt: "Non-automotive solutions",
   },
   {
-    id: "Contact",
-    imageSrc: "/image/full-screen-grid/contact.jpg",
-    title: "Contact",
+    id: "Why Choose Us",
+    imageSrc: "/image/full-screen-grid/why-choose-us.jpg",
+    title: "Why Choose Us",
     link: "/what-we-do/non-automotive",
     alt: "Non-automotive solutions",
   },
@@ -101,10 +101,27 @@ const FullScreenGrid = () => {
                 className="grid-image object-cover"
               />
               <div className="absolute inset-0  bg-opacity-30 flex items-start justify-start p-16">
-                <div className="grid-title-wrapper">
-                  <h3 className="text-2xl font-bold font-chakra-petch relative text-[#FFA500] hover-effect">
-                    {item.title}
-                  </h3>
+                <div
+                  className={`grid-title-wrapper ${
+                    item.id === "Why Choose Us" ? "bottom-right" : ""
+                  }`}
+                >
+                  {item.id === "leadership" ||
+                  item.id === "infrastructure" ||
+                  item.id === "sustainability" ||
+                  item.id === "automotive" ? (
+                    <h3 className="text-2xl font-bold font-chakra-petch relative text-[#D90429] hover-effect">
+                      {item.title}
+                    </h3>
+                  ) : item.id === "Why Choose Us" ? (
+                    <h3 className="text-3xl font-bold font-chakra-petch relative text-[#FFA500] hover-effect">
+                      {item.title}
+                    </h3>
+                  ) : (
+                    <h3 className="text-2xl font-bold font-chakra-petch relative text-white hover-effect">
+                      {item.title}
+                    </h3>
+                  )}
                 </div>
               </div>
             </div>
