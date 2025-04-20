@@ -39,10 +39,3 @@
   padding: 0.5rem;
 }
 
-.grid-title-wrapper.bottom-right {
-  top: auto;
-  bottom: 1rem;
-  left: auto;
-  right: 1rem;
-  text-align: right;
-}
