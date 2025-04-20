@@ -87,17 +87,17 @@
   .hero-background-image {
     background-size: cover;
     background-position: center;
-    animation: subtle-zoom 20s ease-out forwards;
+    /* animation: subtle-zoom 20s ease-out forwards; */
   }
 
-  @keyframes subtle-zoom {
+  /* @keyframes subtle-zoom {
     0% {
       transform: scale(1.1);
     }
     100% {
       transform: scale(1);
     }
-  }
+  } */
 
   /* Add these styles */
   .metallic-overlay {

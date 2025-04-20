@@ -66,6 +66,9 @@ const Hero = () => {
         src="/image/hero-bg/background2.jpg"
         alt="Hero Background"
         fill
+        sizes="(max-width: 768px) 100vw,
+         (max-width: 1200px) 80vw,
+         100vw"
         priority
         className="absolute inset-0 animate-subtle-zoom object-cover"
       />
