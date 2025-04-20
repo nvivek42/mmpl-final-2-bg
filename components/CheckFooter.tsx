@@ -165,7 +165,7 @@ export default function Footer() {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="hover:text-blue-500 transition-colors text-sm sm:text-base block py-1 sm:py-0"
+                        className="hover:text-[#9F0E31] transition-colors text-sm sm:text-base block py-1 sm:py-0"
                       >
                         {link.label}
                       </Link>
@@ -229,7 +229,7 @@ export default function Footer() {
                 >
                   <Link
                     href={`/about/${item.toLowerCase()}`}
-                    className="hover:text-blue-500 transition-colors"
+                    className="hover:text-[#9F0E31] transition-colors"
                   >
                     <span>{item}</span>
                   </Link>
@@ -291,7 +291,7 @@ export default function Footer() {
                 >
                   <Link
                     href={`/services/${item.toLowerCase()}`}
-                    className="hover:text-blue-500 transition-colors"
+                    className="hover:text-[#9F0E31] transition-colors"
                   >
                     <span>{item}</span>
                   </Link>
@@ -362,7 +362,7 @@ export default function Footer() {
                 </svg>
                 <a
                   href={`mailto:${CONTACT_INFO.email}`}
-                  className="hover:text-blue-500 transition-colors break-all"
+                  className="hover:text-[#9F0E31] transition-colors break-all"
                 >
                   {CONTACT_INFO.email}
                 </a>
@@ -383,7 +383,7 @@ export default function Footer() {
                 </svg>
                 <a
                   href={`tel:${CONTACT_INFO.phone}`}
-                  className="hover:text-blue-500 transition-colors"
+                  className="hover:text-[#9F0E31] transition-colors"
                 >
                   {CONTACT_INFO.phone}
                 </a>

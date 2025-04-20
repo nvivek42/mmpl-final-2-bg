@@ -79,7 +79,7 @@ const HoverDropdownMenu = ({ item, isMobile, onClose }: { item: MenuItem; isMobi
       onMouseLeave={() => !isMobile && setIsHovered(false)}
     >
       <div 
-        className={`nav-link cursor-pointer px-4 py-2  transition-colors ${isHovered ? 'text-blue-600' : ''}`}
+        className={`nav-link cursor-pointer px-4 py-2  transition-colors ${isHovered ? 'text-[#9F0E31]' : ''}`}
         onClick={() => isMobile && setIsHovered(!isHovered)}
       >
         <span className={`${item.colorClass}`}>{item.title}</span>
@@ -92,7 +92,7 @@ const HoverDropdownMenu = ({ item, isMobile, onClose }: { item: MenuItem; isMobi
               href={`/${item.title.toLowerCase()}/${subItem.toLowerCase().replace(/\s+/g, '-')}`}
               key={index}
               onClick={onClose}
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600"
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#FDDE54] hover:text-[#9F0E31]"
             >
               {subItem}
             </Link>
@@ -142,7 +142,7 @@ const Header = () => {
         <div className="flex items-center pl-2 sm:pl-4">
           <Link href="/" className="flex items-center">
             <Logo />
-            <span className="site-title text-lg sm:text-lg md:text-2xl font-chakra-petch">
+            <span className="site-title text-lg sm:text-lg md:text-2xl lg:text-3xl font-chakra-petch">
               &nbsp; {SITE_TITLE}
             </span>
           </Link>

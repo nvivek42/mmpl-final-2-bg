@@ -86,7 +86,7 @@
 
   .hero-background-image {
     background-size: cover;
-    background-position: center;
+    background-position: bottom center;
     /* animation: subtle-zoom 20s ease-out forwards; */
   }
 

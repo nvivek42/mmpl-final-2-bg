@@ -32,7 +32,7 @@ const gridItems: GridItem[] = [
   },
   {
     id: "infrastructure",
-    imageSrc: "/image/full-screen-grid/infra5.jpg",
+    imageSrc: "/image/full-screen-grid/infra4.jpg",
     title: "Infrastructure",
     link: "/who-we-are/facilities",
     alt: "infra",
@@ -114,7 +114,7 @@ const FullScreenGrid = () => {
                       {item.title}
                     </h3>
                   )  : (
-                    <h3 className="text-2xl font-bold font-chakra-petch relative text-white hover-effect">
+                    <h3 className="text-2xl font-bold font-chakra-petch relative text-[#FFA500] hover-effect">
                       {item.title}
                     </h3>
                   )}

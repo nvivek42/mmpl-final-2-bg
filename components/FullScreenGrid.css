@@ -7,7 +7,7 @@
 }
 
 .hover-effect::before {
-  background: #2B2D42;
+  background: #ffff;
   content: "";
   position: absolute;
   inset: 0;
