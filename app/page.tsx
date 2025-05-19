@@ -41,8 +41,6 @@ export default function Home() {
       {/* <Suspense fallback={<div>Loading...</div>}>
         <CTA />
       </Suspense> */}
-            <div className="flex-grow"></div>
-
       <CheckFooter/>
     </main>
   );

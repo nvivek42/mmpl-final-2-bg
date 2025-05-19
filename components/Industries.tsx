@@ -39,7 +39,7 @@ export default function Industries() {
               </div>
 
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
 
               {/* Content */}
               <div className="relative p-8 h-[300px] flex flex-col justify-end">

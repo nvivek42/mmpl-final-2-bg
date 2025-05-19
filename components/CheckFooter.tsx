@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import Logo from "./Logo"; // Assuming Logo component exists
 
 // Site-wide configuration and constants
 export const SITE_TITLE = "METALMACH MASTERY";
@@ -102,7 +101,8 @@ export default function Footer() {
         <div className="text-center mb-6">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-chakra-petch font-bold">
             Metalmach Mastery Pvt Ltd
-          </h1><br />
+          </h1>
+          <br />
         </div>
 
         {/* Main Content Grid - Responsive design with better mobile layout */}

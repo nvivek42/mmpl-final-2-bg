@@ -51,45 +51,64 @@ const menuItems: MenuItem[] = [
 ];
 
 // Hover dropdown component
-const HoverDropdownMenu = ({ item, isMobile, onClose }: { item: MenuItem; isMobile: boolean; onClose: () => void }) => {
+const HoverDropdownMenu = ({
+  item,
+  isMobile,
+  onClose,
+}: {
+  item: MenuItem;
+  isMobile: boolean;
+  onClose: () => void;
+}) => {
   const [isHovered, setIsHovered] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Handle click outside for mobile
   useEffect(() => {
     if (!isMobile) return;
-    
+
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsHovered(false);
       }
     };
-    
-    document.addEventListener('mousedown', handleClickOutside);
+
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isMobile]);
 
   return (
-    <div 
+    <div
       className="relative"
       ref={dropdownRef}
       onMouseEnter={() => !isMobile && setIsHovered(true)}
       onMouseLeave={() => !isMobile && setIsHovered(false)}
     >
-      <div 
-        className={`nav-link cursor-pointer px-4 py-2  transition-colors ${isHovered ? 'text-[#9F0E31]' : ''}`}
+      <div
+        className={`nav-link cursor-pointer px-4 py-2  transition-colors ${
+          isHovered ? "text-[#9F0E31]" : ""
+        }`}
         onClick={() => isMobile && setIsHovered(!isHovered)}
       >
         <span className={`${item.colorClass}`}>{item.title}</span>
       </div>
-      
+
       {isHovered && (
         <div className="absolute left-0 mt-0 w-48 bg-white rounded-md shadow-lg z-50 py-1">
           {item.items.map((subItem, index) => (
             <Link
-              href={`/${item.title.toLowerCase()}/${subItem.toLowerCase().replace(/\s+/g, '-')}`}
+              href={
+                item.title === "WHO WE ARE"
+                  ? `/who-we-are/${subItem.toLowerCase().replace(/\s+/g, "-")}`
+                  : `/${item.title.toLowerCase()}/${subItem
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`
+              }
               key={index}
               onClick={onClose}
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#FDDE54] hover:text-[#9F0E31]"
@@ -109,20 +128,20 @@ const Header = () => {
 
   useEffect(() => {
     // Check if we're on the client side
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       // Set initial state
       setIsMobile(window.innerWidth < 1024);
-      
+
       // Add resize listener
       const handleResize = () => {
         setIsMobile(window.innerWidth < 1024);
       };
-      
-      window.addEventListener('resize', handleResize);
-      
+
+      window.addEventListener("resize", handleResize);
+
       // Clean up
       return () => {
-        window.removeEventListener('resize', handleResize);
+        window.removeEventListener("resize", handleResize);
       };
     }
   }, []);
@@ -147,7 +166,7 @@ const Header = () => {
             </span>
           </Link>
         </div>
-        
+
         {/* Mobile Menu Toggle - Only visible on mobile */}
         <button
           className="lg:hidden focus:outline-none p-2"
