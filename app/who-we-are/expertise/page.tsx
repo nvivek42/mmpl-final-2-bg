@@ -148,7 +148,7 @@ const Overview = () => {
               quote:
                 "From concept to casting— We're fully equipped.",
               description: [
-                "we support both low- and high-volume production with best-in-class equipment (CNC-Makino, Micron, Hartford, VMC, EDM).",
+                "We support both low- and high-volume production with best-in-class equipment (CNC-Makino, Micron, Hartford, VMC, EDM).",
                 "Our integrated infrastructure features -",
                
               ].join(" "),
@@ -214,9 +214,7 @@ const Overview = () => {
     )}
     {item.industries && (
       <>
-        <p className="text-lg font-semibold text-gray-700 mb-4">
-          Industries Served
-        </p>
+        
         <div className="grid grid-cols-2 gap-6">
           {item.industries.map((industry, i) => (
             <span key={i} className="text-gray-600">
