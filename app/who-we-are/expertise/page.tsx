@@ -178,7 +178,7 @@ const Overview = () => {
 
           ].map((item, index) => (
             <div key={index} className="relative overflow-hidden">
-              {item.type === "image" ? (
+              {item.type === "image" && item.image ? (
                 // Image Grid
                 <div className="relative w-full pb-[100%]">
                   <Image
