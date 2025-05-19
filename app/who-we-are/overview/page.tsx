@@ -23,12 +23,17 @@ const Overview = () => {
       {/* Hero Section */}
       <section className="relative h-[60vh] overflow-hidden">
         <Image
-          src="/image/pages/overview4.jpg"
+          src="/image/pages/infra2.webp"
           alt="Overview Hero"
           fill
-          className="object-cover"
+          className="object-contain"
           priority
         />
+        {/* Diagonal stripes */}
+      <div
+        className="absolute inset-0 before:absolute before:inset-0 before:z-0 before:translate-x-[-45%] before:rotate-[-35deg] before:transform
+        before:bg-gradient-to-r before:from-[#0a1530] before:via-[#1e3a8a] before:to-[#3b82f6] before:content-['']"
+      />
         <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 flex items-start justify-start p-16">
           <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-roboto font-bold mt-4 ">

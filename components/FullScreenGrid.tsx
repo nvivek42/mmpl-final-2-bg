@@ -53,7 +53,7 @@ const gridItems: GridItem[] = [
 
   {
     id: "non-automotive",
-    imageSrc: "/image/full-screen-grid/n-auto2.jpg",
+    imageSrc: "/image/full-screen-grid/non-auto.jpg",
     title: "Non-Automotive",
     link: "/what-we-do/non-automotive",
     alt: "Non-automotive solutions",

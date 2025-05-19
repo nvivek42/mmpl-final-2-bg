@@ -11,10 +11,10 @@ const Overview = () => {
       {/* Hero Section */}
       <section className="relative h-[60vh] overflow-hidden">
         <Image
-          src="/image/overview-hero.webp"
+          src="/image/pages/expertise-page.jpg"
           alt="Overview Hero"
           fill
-          className="object-cover"
+          className="object-fill"
           priority
         />
         <div className="absolute inset-0 bg-black/50" />

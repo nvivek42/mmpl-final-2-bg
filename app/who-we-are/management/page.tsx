@@ -6,19 +6,19 @@ import CheckFooter from "@/components/CheckFooter"
 // Management team data
 const managementTeam = [
   {
-    name: "Rajeev Sharma",
-    role: "Chief Executive Officer",
-    email: "rajeev.sharma@mmpl.com"
+    name: "Mr. Sahil Joshi",
+    role: "Director",
+    email: "srjoshi@metalmach.in"
   },
   {
-    name: "Priya Patel",
-    role: "Chief Financial Officer",
-    email: "priya.patel@mmpl.com"
+    name: "Mr. Sunil Ingale",
+    role: "Director",
+    email: "sgingale@metalmach.in"
   },
   {
-    name: "Amit Kumar",
-    role: "Chief Technology Officer",
-    email: "amit.kumar@mmpl.com"
+    name: "Mr. Vinit Inamdar",
+    role: " General Manager ",
+    email: "vvinamdar@metalmach.in"
   },
   // Add more team members as needed
 ]
