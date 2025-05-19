@@ -31,7 +31,7 @@ const menuItems: MenuItem[] = [
   {
     title: "WHAT WE DO",
     items: ["Overview", "Automotive", "Non-Automotive", "E-Mobility"],
-    colorClass: "menu-title_2nd",
+    colorClass: "",
   },
   {
     title: "JOIN US",
@@ -103,18 +103,19 @@ const HoverDropdownMenu = ({
           {item.items.map((subItem, index) => (
             <Link
               href={
-                item.title === "WHO WE ARE"
-                  ? `/who-we-are/${subItem.toLowerCase().replace(/\s+/g, "-")}`
-                  : `/${item.title.toLowerCase()}/${subItem
-                      .toLowerCase()
-                      .replace(/\s+/g, "-")}`
-              }
+          item.title === "WHAT WE DO"
+            ? `/what-we-do/${subItem.toLowerCase().replace(/\s+/g, "-")}`
+            : item.title === "WHO WE ARE"
+            ? `/who-we-are/${subItem.toLowerCase().replace(/\s+/g, "-")}`
+            : `/${item.title.toLowerCase()}/${subItem.toLowerCase().replace(/\s+/g, "-")}`
+        }
               key={index}
               onClick={onClose}
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#FDDE54] hover:text-[#9F0E31]"
             >
               {subItem}
             </Link>
+            
           ))}
         </div>
       )}
