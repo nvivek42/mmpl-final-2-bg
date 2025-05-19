@@ -144,12 +144,14 @@ export default function LeadershipPage() {
               <div className="relative w-full pb-[100%]">
                 {" "}
                 {/* Increased from 60% to 75% for more height */}
-                <Image
-                  src={item.image}
-                  alt=""
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
-                />
+                {item.image && (
+                  <Image
+                    src={item.image}
+                    alt=""
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                )}
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-transparent to-gray/50 flex flex-col justify-top p-8">
                   {" "}
