@@ -26,7 +26,7 @@ const Overview = () => {
           src="/image/pages/infra2.webp"
           alt="Overview Hero"
           fill
-          className="object-contain"
+          className="object-fill"
           priority
         />
         {/* Diagonal stripes */}
